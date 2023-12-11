@@ -1,5 +1,5 @@
 
-/* @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto+Slab:wght@300&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto+Slab:wght@300&display=swap');
 
 *{
     margin: 0;
@@ -84,6 +84,7 @@
     padding: 10px 0px 10px 25px;
     /* background-color: red; */
     user-select: none;
+    cursor: pointer;
 }
 
 .task-container li::before{
@@ -93,7 +94,7 @@
     background-size: cover;
     background-position: center;
     left: 0;
-    top: 13px;
+    top: 14px;
     height: 20px;
     width: 20px;
 }
@@ -105,4 +106,22 @@
 
 .task-container .checked::before{
     background: url(images/checked.png)center/cover;
+}
+
+li span{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    font-size: 30px;
+    color: gray;
+    margin: auto;
+    width: 30px;
+    height: 30px;
+    padding-left: 7px;
+    padding-bottom: 9.5px;
+}
+
+li span:hover{
+    background: #e2e0e0;
+    border-radius: 50%;
 }
