@@ -46,7 +46,7 @@
     background-color: #e2e0e0;
     margin: auto;
     padding: 0px 0px 0px 20px;
-    border-radius: 20px;
+    border-radius: 25px;
 }
 
 .input-container input{
@@ -65,7 +65,7 @@
     color: white;
     outline: none;
     border: none;
-    border-radius: 20px;
+    border-radius: 25px;
 }
 
 .task-container{
