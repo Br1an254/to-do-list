@@ -12,8 +12,13 @@ function addTask() {
         const span = document.createElement('span')
         span.innerHTML = "&times;"
         newTask.innerText = concatTaskContent
+        const edit = document.createElement('button')
+        edit.innerHTML = 'Edit'
+        edit.id = 'edit'
+        edit.className = 'edit-button'
         taskContainer.appendChild(newTask)
         newTask.appendChild(span)
+        newTask.appendChild(edit)
     }
     input.value = ''
 }
@@ -21,7 +26,9 @@ function addTask() {
 taskContainer.addEventListener('click', function (e) {
     if (e.target.tagName === 'LI') {
         e.target.classList.toggle('checked')
-    }else if(e.target.tagName === 'SPAN'){
+    }else if (e.target.tagName === 'SPAN') {
         e.target.parentElement.remove()
+    }else if(e.target.tagName = 'BUTTON'){       
+            console.log(e.target.parentElement.innerText)
     }
 }, false)
