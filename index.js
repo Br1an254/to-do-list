@@ -1,8 +1,9 @@
 const input = document.getElementById('input')
 const taskContainer = document.querySelector('.task-container')
+const editBtn = document.querySelector('.editBtn')
+const editInput = document.querySelector('.editInput')
 
 function addTask() {
-
     if (input.value.trim() === ``) {
         alert(`input value is empty: please write something`)
     } else {
@@ -19,6 +20,14 @@ function addTask() {
         taskContainer.appendChild(newTask)
         newTask.appendChild(span)
         newTask.appendChild(edit)
+
+
+        edit.addEventListener('click', () => {
+            newTask.innerHTML = `
+            <input type="text" id="myTextInput" placeholder="Enter text here">
+            `
+            newTask.focus()
+        })
     }
     input.value = ''
 }
@@ -26,9 +35,10 @@ function addTask() {
 taskContainer.addEventListener('click', function (e) {
     if (e.target.tagName === 'LI') {
         e.target.classList.toggle('checked')
-    }else if (e.target.tagName === 'SPAN') {
+    } else if (e.target.tagName === 'SPAN') {
         e.target.parentElement.remove()
-    }else if(e.target.tagName = 'BUTTON'){       
-            console.log(e.target.parentElement.innerText)
+        //<input type="text" id="myTextInput" placeholder="Enter text here">
     }
+
 }, false)
+
